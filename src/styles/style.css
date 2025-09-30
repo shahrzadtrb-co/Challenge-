@@ -1,0 +1,110 @@
+:root {
+  --bg: #0b0c10;
+  --panel: #16181d;
+  --text: #e6e6e6;
+  --muted: #9aa0a6;
+  --border: #2a2e35;
+  --accent: #4f9cf9;
+  --accent-contrast: #0b0c10;
+}
+
+.app {
+  padding: 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.title {
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #666;
+}
+
+/* Controls row */
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+/* Status messages */
+.status {
+  padding: 16px 0;
+}
+
+.status.error {
+  color: #c00;
+}
+
+/* Table layout */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.fees-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.fees-table th {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  white-space: nowrap;
+}
+
+.fees-table th.th-clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.fees-table td {
+  border-bottom: 1px solid #eee;
+  padding: 8px;
+  white-space: nowrap;
+}
+
+.fees-table td.td-muted {
+  color: #666;
+}
+
+/* Align search input and dropdown */
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Make input and select share consistent sizing */
+.controls .form-control,
+.controls .form-select {
+  min-width: 240px;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Table defaults */
+table { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+th { text-align: left; color: var(--muted); }
+td { color: var(--text); }
+tr:last-child td { border-bottom: 0; }
+
+
+/* Mobile: hide datetime column */
+@media (max-width: 640px) {
+  th:nth-child(5), td:nth-child(5) { display: none; }
+}
