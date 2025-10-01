@@ -149,7 +149,7 @@ function App() {
             {/* If nothing matches the search */}
             {sorted.length === 0 ? (
               <tr>
-                <td colSpan={5}>No results</td>
+                <td colSpan={5}>___</td>
               </tr>
             ) : (
               // Otherwise, list the latest rows with formatted numbers and dates
