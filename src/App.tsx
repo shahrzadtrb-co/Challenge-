@@ -70,7 +70,7 @@ function App() {
     )
   : rows;
 
-// get the value for maker or taker at the chosen notation
+// get the value for maker or taker at the chosen notion
   function getValue(r: LatestRow, key: SortKey): number | undefined {
     if (!key) return undefined;
     const raw = r.fees?.[key]?.[notional];
@@ -84,8 +84,9 @@ function App() {
       const av = getValue(a, sortKey);
       const bv = getValue(b, sortKey);
       if (av === undefined && bv === undefined) return 0;
-      if (av === undefined) return 1; // push missing to bottom
-      if (bv === undefined) return -1; // push missing to bottom
+    // push missing to bottom
+      if (av === undefined) return 1; 
+      if (bv === undefined) return -1; 
       return sortDir === 'asc' ? av - bv : bv - av;
     })
   : filtered;
