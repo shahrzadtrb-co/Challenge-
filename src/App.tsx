@@ -183,7 +183,7 @@ function SortDir(key: SortKey, dir: SortDir, me: Exclude<SortKey, null>) {
   return dir === 'asc' ? '▲' : '▼';
 }
 
-//showing the sorted direction to user 
+//showing the sorted order to user 
 function DirArrow(
   key: SortKey,
   dir: SortDir,
